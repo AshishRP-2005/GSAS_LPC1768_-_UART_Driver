@@ -5,7 +5,7 @@ In Embedded sytems a variable is a row of switches
 - Each switch controls hardware, i.e 1 = ON, 0 = OFF
 - example `bit 1 = LED` in Stm32 uc
 
-# Important note what each bit does changes depending on the micro-controller so it is important to be able to read the datasheet/manual of that micro-controller
+### Important note - what each bit does changes depending on the micro-controller so it is important to be able to read the datasheet/manual of that micro-controller
 
 # | OR 
 - It is used to set a bit
