@@ -16,3 +16,8 @@
 ## Question 
 To Set a BIT or Clear a BIT, I can use |= and &= ~() respectively, So why is there a need for different SET and CLR codes?
 - Apparently it is to increase speed and make sure that the accidently some other pin is not Set or Cleared
+
+## Reusable Driver Code
+- Instead of writing a line like `FIOSET |= (1<<22)` everywhere in the code. We can write
+- `void LED(void) { FIOSET |= (1<<22)}` Once at the start of the Program and just use `LED()` wherever it is required
+- Better yet `void LED(uint32_t pin) { FIOSET |= (1<<pin)}` - this will create a reusable code where i can use it for any PIN
