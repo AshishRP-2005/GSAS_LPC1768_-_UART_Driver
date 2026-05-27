@@ -8,7 +8,7 @@
 ## GPIO Architecture
 - For the LPC1768, Some common code for Configuring peripheral and pins
   - `PINSEL` - Specifies what the Pin will do (pin multiplexing)
-  - `FIODIR` - Selects whether a pin in input or output, selecting its direction
+  - `FIODIR` - Selects whether a pin in input or output, selecting its direction ` 1 = OUTPUT, 0 = INPUT`
   - `FIOSET` - Set HIGH
   - `FIOCLR` - Set LOW
   - `FIOPIN` - Read pin state
