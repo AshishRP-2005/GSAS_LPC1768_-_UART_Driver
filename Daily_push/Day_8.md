@@ -14,4 +14,4 @@
     - baud rate
     - stop bits
     - parity
-    - data bits
+    - data size
