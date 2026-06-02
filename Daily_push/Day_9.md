@@ -16,4 +16,10 @@
 - We use `PINSEL` to select the function of the pin
 - It is to make sure that the TX and RX pins are selcted out of the several available functions of the pins
 - `PINSEL0` = UART, `P0.2->TXD0`, `P0.3->RXD0`
-   
+
+# DLAB
+- So DLAB is a lock, basically it will unlock functions of UART for me and after using it i will lock it again
+- `U0LCR |= (1<<7)` unlocks
+      - `U0DLL`
+      - `UODLM`
+      - I think they are used in baud rate setting
