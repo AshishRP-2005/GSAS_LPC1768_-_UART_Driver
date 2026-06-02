@@ -23,3 +23,19 @@
       - `U0DLL`
       - `UODLM`
       - I think they are used in baud rate setting
+- `U0LCR &= ~(1<<7)`
+
+# Important and comman UART commands
+- `U0THR`
+      - Transmit holding register
+      - It holds the Data that is ready to be transmitted
+      - `U0THR = 'A'` - Sends ASCII value of A
+- `U0LSR`
+    - Line status register
+    - Tells you whether UART is ready
+    - Used to check if the Register empty or not
+    - Status of register
+- `U0LCR`
+    - Line Control Register
+    - This gives access to control of stop bits, start bits, parity bits, baud rate (through DLAB)
+  
