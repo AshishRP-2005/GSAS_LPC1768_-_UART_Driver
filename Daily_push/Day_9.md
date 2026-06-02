@@ -42,8 +42,20 @@ This means to Configure pins, set baud rate, set format etc
 
 ## Some Function Code (resuable code)
 - ```
-    void uart_config(){
-    PINCON->PINSEL0 
+  void uart_config(){
+  
+  PINCON->PINSEL0 &= ~((3<<4)|(3<<6))
+  PINCON->PINSEL0 |= ((1<<4)|(1<<6))
+  
+  LPC_UART0->LCR = 0x03;
+
+  LPC_UART0->LCR |= (1 << 7);
+
+  LPC_UART0->DLL = 97;
+  LPC_UART0->DLM = 0;
+
+  LPC_UART0->LCR &= ~(1 << 7);
+  }
   ```
   
   
