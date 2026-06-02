@@ -12,6 +12,7 @@
     - 1 Stop bit
 
 # Configuration
+This means to Configure pins, set baud rate, set format etc
 - Previously we had talked about PIN multiplexing
 - We use `PINSEL` to select the function of the pin
 - It is to make sure that the TX and RX pins are selcted out of the several available functions of the pins
