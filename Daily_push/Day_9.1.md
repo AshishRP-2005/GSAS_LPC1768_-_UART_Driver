@@ -29,7 +29,7 @@ void init(void){
 	LPC_UART0->DLL = 163;
 	LPC_UART0->DLM = 0;
 
-	LPC_UARTO->LCR = 0;
+	LPC_UART0->LCR = 0x03;
 }
 
 void TXchar( char c)
@@ -46,7 +46,7 @@ void TXstring(char *str)
 	}
 }
 
-void RX(void)
+char RX(void)
 {
 	while(!(LPC_UART0->LSR & (1<<0)));
 	return LPC_UART0->RBR;
